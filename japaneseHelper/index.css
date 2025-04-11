@@ -1,0 +1,180 @@
+body {
+    background: #101013;
+    overflow: hidden;
+}
+
+#h1 {
+    display: inline;
+    color: white;
+    margin: 0px;
+    margin-top: 15px;
+    font-size: 45px;
+}
+
+h2 {
+    display: inline;
+    color: white;
+    font-size: 35px;
+}
+
+h3 {
+    display: inline;
+    color: white;
+}
+
+button {
+    margin: 1px;
+    background-color: #111114;
+    color: white;
+    border: none;
+    box-shadow: -5px 10px 15px #080808, inset 5px -10px 8px #080808, inset -5px 5px 5px #1c1c1e;
+    background-color: #111114;
+    transition: all 100ms ease-in;
+    border-radius: 5px;
+}
+
+#buttonDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+#optionBar {
+    padding: 3px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    transition: all 50ms ease-in;
+    transform: scale(1);
+
+}
+
+#optionBar:hover {
+    transform: scale(1.1);
+    transition: all 50ms ease-in;
+}
+
+#menu {
+    position: absolute;
+    background-color: #19191c;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+}
+
+#hiraganaDiv {
+    display: inline-block;
+}
+
+#katakanaDiv {
+    display: inline-block;
+}
+
+#wordsDiv {
+    position: absolute;
+    display: inline-block;
+    width: 66%;
+    right: 10px;
+}
+
+#textDiv {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -5px 10px 15px #080808, inset 5px -10px 8px #080808, inset -5px 5px 5px #1c1c1e;
+    background-color: #111114;
+    transition: all 100ms ease-in;
+
+}
+
+#textDiv:hover {
+    transition: all 100ms ease-in;
+    transform: translate(-50%, -50%) scale(1.02);
+    box-shadow: -9px 15px 20px #080808, inset 5px -10px 8px #080808, inset -5px 5px 5px #1c1c1e;
+    
+}
+
+#text {
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -100%);
+    left: 50%;
+    top: 50%;
+    white-space: nowrap;
+}
+
+#typeText {
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -100%);
+    left: 50%;
+    top: -16%;
+}
+
+#button {
+    width: 160px;
+    height: 70px;
+    color: white;
+    box-shadow: inset 3px -3px 8px #1c1c1e, inset -3px 3px 8px #080808;
+    background-color: #111114;
+    border: none;
+    border-radius: 10px;
+}
+
+#button:hover {
+    box-shadow: inset 5px -5px 8px #1c1c1e, inset -5px 5px 8px #080808;
+    
+}
+
+#button:active {
+    box-shadow: inset 7px -7px 10px #1c1c1e, inset -7px 7px 10px #080808;
+}
+
+#center {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, 0%);
+}
+
+#reverseBox {
+    width: 20px;
+    height: 20px;
+}
+
+#reverseBox:checked {
+    accent-color: green;
+}
+
+#reverseBoxForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+}
+
+#reverseBoxLabel {
+    margin-left: 10px;
+    font-size: 30px;
+    color: white;
+}
+
+#score {
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    right: 35px;
+    top: 0px;
+    font-size: 40px;
+}

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1 id="score">00/00</h1>
+        <button id="textDiv" onclick="showAnswer()">
+            <h1 id="typeText"></h1>
+            <h1 id="text">あ</h1>
+        </button>
+        <div id="center">
+            <button id="button" onclick="wrong()">Wrong</button>
+            <button id="button" onclick="correct()">Correct</button>
+        </div>
+        <div id="menu">
+            <div id="buttonDiv">
+                <div id="hiraganaDiv">
+                    <h1 id="h1">Hiragana</h1>
+                    <button id="clearButton" onclick="clearButton('h1')">invert</button>
+                    <table id="normalHiraganaTable"></table>
+                    <h2>Dakuon</h2>
+                    <button id="clearButton" onclick="clearButton('h2')">invert</button>
+                    <table id="dakuonHiraganaTable"></table>
+                </div>
+                <div id="katakanaDiv">
+                    <h1 id="h1">Katakana</h1>
+                    <button id="clearButton" onclick="clearButton('k1')">invert</button>
+                    <table id="normalKatakanaTable"></table>
+                    <h2>Dakuon</h2>
+                    <button id="clearButton" onclick="clearButton('k2')">invert</button>
+                    <table id="dakuonKatakanaTable"></table>
+                </div>
+                <div id="wordsDiv">
+                    <h1 id="h1">Words</h1>
+                    <button id="clearButton" onclick="clearButton('j')">invert</button>
+                    <table id="wordsTable"></table>
+                </div>
+            </div>
+            <form id="reverseBoxForm">
+                <input type="checkbox" onclick="reverse()" id="reverseBox" name="reverseBox">
+                <label for="reverseBox" id="reverseBoxLabel">Show Romaji</label>
+            </form>
+        </div>
+        <img id="optionBar" src="images/optionBar.png" draggable="false" onclick="optionMenu()">
+        <script src="index.js"></script> 
+    </body>
+</html>
