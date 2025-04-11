@@ -1,0 +1,11 @@
+#weightWindow {
+    height: 95%;
+    display: flex;
+    text-align: center;
+    
+}
+
+h2 {
+    color: white;
+    padding: 3px;
+}
