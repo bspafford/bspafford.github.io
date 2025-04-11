@@ -1,0 +1,58 @@
+body {
+    background-color: #000000;
+}
+
+@font-face {
+    font-family: "Emulogic-zrEw";
+    src: url(font/Emulogic-zrEw.ttf);
+}
+
+body {
+    font-family: "Emulogic-zrEw";
+}
+
+h1 {
+    color: white;
+}
+
+table {
+   padding: 0%;
+   border-collapse: collapse;
+}
+
+th {
+   margin: 0px;
+   padding: 0px;
+}
+
+tr {
+   margin: 0px;
+   padding: 0px;
+}
+
+#center {
+    width: 672px;
+    position: absolute;
+}
+
+img {
+    image-rendering: pixelated;
+}
+
+#pellet {
+    width: 24px;
+}
+
+#pacman {
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    margin: 0px;
+}
+
+#blinky {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    margin: 0px;
+}
