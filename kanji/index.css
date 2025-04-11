@@ -1,0 +1,40 @@
+body {
+    background: #101013;
+}
+
+h1 {
+    display: inline;
+    color: white;
+    margin: 0px;
+    font-size: 45px;
+    position: absolute;
+}
+
+h2 {
+    display: inline;
+    color: white;
+    font-size: 35px;
+}
+
+h3 {
+    display: inline;
+    color: white;
+}
+
+button {
+    margin: 1px;
+    color: white;
+    background-color: #111114;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+p {
+    font-size: 0px;
+}
+
+#center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
