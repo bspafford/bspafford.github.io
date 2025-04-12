@@ -3,17 +3,19 @@ const context = canvas.getContext("2d");
 
 const frameCount = 150;
 const images = [];
-const imageSeq = index => `frames/frame_${index.toString().padStart(4, '0')}.jpg`;
+const imageSeq = index => `frames/frame_${index.toString().padStart(4, '0')}.png`;
 
 fadeText = document.getElementById("fadeText")
 
 let currentFrame = 0;
 
-const items = document.querySelectorAll('#projectItem');
+const items = document.querySelectorAll('.projectItem');
 items.forEach(item => {
   item.addEventListener('click', () => {
+    if (item.id != "idleFisher") {
     const url = item.getAttribute('data-link');
     window.location.href = url;
+    }
   });
 });
 
@@ -29,8 +31,14 @@ for (let i = 0; i < frameCount; i++) {
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+window.onresize = function() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  drawImageCover(context, images[currentFrame], canvas)
+};
+
 images[0].onload = function () {
-    drawImageCover(context, images[0], canvas)
+  drawImageCover(context, images[0], canvas)
 };
 
 // Scroll handler
@@ -66,7 +74,7 @@ window.addEventListener("scroll", () => {
     const opacity = Math.min(Math.max((scrollTop - triggerStart) / (triggerEnd - triggerStart), 0), 1);
     fadeText.style.opacity = opacity;
 
-    const items = document.querySelectorAll('#projectItem');
+    const items = document.querySelectorAll('.projectItem');
     items.forEach(item => {
     if (isInViewport(item)) {
         item.classList.add('visible');
@@ -101,4 +109,4 @@ function drawImageCover(ctx, img, canvas) {
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return rect.top + 200 <= window.innerHeight;
-  }
+}
