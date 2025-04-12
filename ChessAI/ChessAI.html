@@ -1,0 +1,95 @@
+<html>
+<body id="body">
+    <div class="center">
+        <div id="pawnPromotion">
+            <button class="queenPromotion" onclick="promotePawn('Q')">
+                <img src="Pieces/wQ.png" draggable="false"/>
+            </button>
+            <button class="knightPromotion" onclick="promotePawn('N')">
+                <img src="Pieces/wN.png" draggable="false"/>
+            </button>
+            <button class="rookPromotion" onclick="promotePawn('R')">
+                <img src="Pieces/wR.png" draggable="false"/>
+            </button>
+            <button class="bishopPromotion" onclick="promotePawn('B')">
+                <img src="Pieces/wB.png" draggable="false"/>
+            </button>
+            
+                
+        </div>
+        <div class="pointBar">
+            <div></div>
+        </div>
+
+        <div class="boardStack">
+            <div class="player2">
+                <img src="Pieces/black_400.png" class="pfp"/>
+                <h3>Black</h3>
+            </div>
+            
+            <div class="boardDiv">
+                <div class="canvasDiv">
+                    <canvas id="boardContainer" width="800" height="800"></canvas>
+                    <div class="canvasDiv piecesContainer" oncontextmenu="return false;">
+                        <div id="navCircle"></div>
+                        <div id="takeCircle"></div>
+                        <div id="images"></div>
+                    </div>
+                </div>
+                
+                <div class="finishScreen piecesContainer">
+                    <div>
+                        <div style="display:flex">
+                            <div class="imgBackground">
+                                <img src="Pieces/white_400.png"/>
+                            </div>
+                            <div class="test">
+                                <div class="textHolder">
+                                    <h2 id="winText">You Win!</h2>
+                                    <h3 id="score">1 - 0</h3>
+                                </div>
+                            </div>
+                            <div class="imgBackground">
+                                <img src="Pieces/black_400.png"/>
+                            </div>
+                        </div>
+                        <button class="newGame" onclick="newGame()">New Game</button>
+                        <button class="review" onclick="reviewGame()">Review</button>
+                    </div>
+                </div>
+            </div>
+            <div class="player1">
+                <img src="Pieces/white_400.png" class="pfp"/>
+                <h3>White</h3>
+            </div>
+        </div>
+
+        <div class="statsBox">
+            <div id="opponentBox">
+                <h1>Play Against AI</h1>
+                <label id="switch">
+                    <input type="checkbox" id="checkbox" onchange="playVsAI()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div id="movesBox">
+
+            </div>
+                <div id="gameControls">
+                    <button class="gameControlsButton" onclick="newGame()">+</button>
+                    <button class="gameControlsButton" onclick="undoMove()"><</button>
+                    <button class="gameControlsButton" onclick="redoMove()">></button>
+                    <button class="gameControlsButton">\</button>
+                </div>
+        </div>
+    </div>
+   
+</body>
+<head>
+    <link rel="stylesheet" href="ChessAI.css">
+    <script src="ChessAI.js"></script>
+    <script src="SmartMoveFinder.js"></script>
+    <audio id="moveAudio" src="Sounds/movePiece.wav"></audio>
+    <audio id="takeAudio" src="Sounds/takePiece.wav"></audio>
+</head>
+</html>
