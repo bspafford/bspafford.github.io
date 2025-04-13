@@ -1,438 +1,153 @@
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    font-family: "Roboto", sans-serif;
-    font-weight:600;
-}
-
-h1 {
-    color: white;
-}
-
-p {
-    font-size: 15px;
-}
-
-p {
-    color: white;
-    font-size: 15px;
-}
-
-li {
-    color: white;
-}
-
-body {
-    margin: 0;
-    background-color: #111;
-}
-
-.scroll-animation-wrapper {
-    height: 3000px;
-    position: relative;
-}
-
-.fade-text {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 0;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    color: white;
-    opacity: 0;
-    transition: opacity .3s ease-out;
-    pointer-events: none;
-    filter: drop-shadow(5px 5px 5px #222);
-    width: 100%;
-}
-
-.fade-text img {
-    position: absolute;
-    top: 50%;
-    left: 53%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    image-rendering: pixelated;
-}
-
-.after-scroll-content {
-    height: 0vh;
-    background: #111;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#hero-canvas {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-}
-
-.fisherInfo {
-    padding-top: 100px;
-    background: #111;
-    box-shadow: 0px -15px 50px #000000;
-    height: fit-content;
-}
-
-.fisherInfo button {
-    background: none;
-    border: none;
-    color: #63b2cf;
-    font-size: 35px;
-    cursor: pointer;
-    padding-bottom: 50px;
-    padding-right: 50px;
-}
-
-.fisherInfo h1 {
-    position: relative;
-    padding: 10px;
-    margin: 0px;
-    padding: 0% 5% 0% 5%;
-}
-
-.projectDiv {
-    display: inline-block;
-    padding: 0% 5% 0% 5%;
-    width: 100%;
-    height: fit-content;
-    background: #111;
-    position: relative;
-    z-index: 100;
-}
-
-.projectDiv h1 {
-    position: relative;
-    font-size: 30px;
-    padding-top: 50px;
-}
-
-.items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 47.5%);
-    gap: 5%;
-    position: relative;
-    z-index: 10;
-    color: white;
-    width: 100%;
-}
-
-.projectItem {
-    display: inline-block;
-    position: relative;
-    height: fit-content;
-    background: #000000;
-    border-radius: 10px;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    overflow: hidden;
-}
-
-.projectItem.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.projectItem::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    transition: box-shadow 0.3s ease;
-    border-radius: 10px;
-    pointer-events: none;
-}
-
-.projectItem:hover::after {
-    box-shadow: inset 0px 0px 100px #000000;
-}
-
-.projectItem img {
-    display: block;
-    width: 100%;
-    height: fit-content;
-    border-radius: 10px;
-    opacity: 1;
-    transition: opacity 0.3s ease, scale 0.3s ease;
-}
-
-.projectItem img:hover {
-    opacity: 0.75;
-    scale: 1.05;
-}
-
-.projectItem p {
-    font-size: 20px;
-    z-index: 10;
-    color: white;
-    position:absolute;
-    top: 91%;
-    left: 4%;
-    transform: translate( 0%, -100%);
-    text-shadow: 10px, 10px, 10px;
-    opacity: 0;
-    transition: left 0.3s ease, opacity 0.3s ease;
-}
-
-.projectItem:hover p {
-    opacity: 1;
-    left: 6%;
-}
-
-#footer {
-    background-color: black;
-    height: fit-content;
-    padding: 20px 5% 50px 5%;
-}
-
-#links {
-    display: flex;
-    /*grid-auto-flow: column;*/
-    /*grid-auto-columns: max-content;*/
-    gap: 50px;
-    align-items: center;
-    flex-wrap: wrap
-
-}
-
-#links li {
-    text-indent: -10px;
-}
-
-#links li a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #63b2cf;
-    text-wrap:nowrap;
-}
-
-.infoDiv {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0% 10% 0% 10%;
-    margin-bottom: 30%;
-}
-
-.infoDiv img {
-    position: relative;
-    padding: 0% 0% 0% 0%;
-    width: 35%;
-}
-.infoDiv h1 {
-    padding: 0% 0% 0% 0%;
-    text-indent: 1em;
-    width: 40%;
-    background-color: #333;
-    border-radius: 10px;
-    padding: 30px
-}
-
-.horizontal {
-    display: flex;
-    margin: 0px auto;
-    margin: 0px 8%;
-    margin-bottom: 30%;
-    background-color: #333;
-    border-radius: 10px;
-    flex-direction: column-reverse;
-}
-
-.horizontal div {
-    justify-content: space-between;
-    align-items: center;
-}
-
-.leftCol {
-    flex: 1 1 50%;
-    padding: 3% 5%;
-    align-self: center;
-}
-
-.rightCol {
-    flex: 1 1 50%;
-}
-
-.horizontal img {
-    position: relative;
-    padding: 0% 0% 0% 0%;
-    border-radius: 10px;
-    object-fit: cover;
-    object-position: 85%;
-    width: 100%;
-    height: 100%;
-}
-
-.horizontal h1 {
-    padding: 0px;
-}
-
-.horizontal p {
-    color: white;
-    padding: 0% 0% 0% 0%;
-    text-align: justify;
-}
-
-.sideDiv {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    width: fit-content;
-    margin: 5%;
-    gap: 25px;
-    flex-direction: column;
-    margin-bottom: 500px;
-}
-
-.sideBlock {
-    width: 90%;
-    background-color: #333;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px auto;
-}
-
-.sideBlock div {
-    padding: 5%;
-}
-
-.sideBlock img {
-    position: relative;
-    width: 100%;
-    border-radius: 10px;
-}
-
-.sideBlock h1 {
-    font-size: 50px;
-    padding: 0px;
-}
-
-.sideBlock p {
-    color: white;
-    padding: 0% 0% 0% 0%;
-    text-align: justify;
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 200px;
-    width: 100%;
-}
-
-.overlap {
-    display: flex;
-    border-radius: 10px;
-    width: 97%;
-    height: 100%;
-    min-height: 100%;
-    padding-left: 10%;
-    overflow:visible;
-    background-image: url("collision.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    background-position: 65% 50%;
-    margin-bottom: 500px;
-}
-
-.overlap div {
-    padding: 10% 0%;
-    height: 100%;
-    text-align: center;
-    width: 50%;
-}
-
-.overlapImgDiv {
-    width: 100%;
-}
-
-.overlap img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    image-rendering: pixelated;
-}
-
-.overlap h1 {
-    font-size: 50px;
-    padding: 0px;
-    text-shadow: 2px 2px 5px #000000aa;
-}
-
-.overlap p {
-    text-indent: 1em;
-    color: white;
-    text-shadow: 3px 3px 5px #00000088;
-}
-
-.demoDiv {
-    width: 90%;
-    background-color: #333;
-    border-radius: 10px;
-}
-
-.demoDiv div {
-    padding: 5%;
-}
-
-.demoDiv h1 {
-    font-size: 50px;
-    padding: 0px;
-}
-
-.demoDiv video {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* screen size is 601 or more */
-@media screen and (min-width: 601px) {
-    .fade-text img {
-        transform: translate(10%, -50%);
-        width: 33%;
-    }
-    
-    .sideDiv {
-        flex-direction: row;
-    }
-
-    h1 {
-        font-size: 60px;
-    }
-
-    p {
-        font-size: 24px;
-        line-height: 2.25rem;
-        font-weight: lighter;
-    }
-
-    .horizontal {
-        flex-direction: row;
-
-    }
-
-    .demoDiv {
-        width: 50%;
-    }
-
-    .items {
-        grid-template-columns: repeat(auto-fit, 200px);
-    }
-}
-
-/* screen size is 600 or less */
-@media screen and (max-width: 600px) {
-
-}
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="canvas-container" style="height: 2000px;">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+
+        <div id="fadeText" class="fade-text"><img src="title.png"></div>
+
+        <section id="idleFisher">
+            <div class="fisherInfo" style="position: relative;">
+                <div style="text-align: end;"><button onclick="location.href='#projects'" style="position: relative;">Go To Projects <img src="down-arrow.svg"  style="width: 30px"></button></div>
+                
+                
+                <div class="horizontal" style="margin-top: 300px">
+                    <div class="leftCol">
+                        <h1>Idle Fisher</h1>
+                        <p>Idle Fisher is my biggest and most ambitious project to date. It's an idle game built around fishing, upgrading, and idling. It's a pretty simple concept but full of challenges.
+                            I'm a solo developer, responsible for all aspects of the game. While I initially had help with the artwork, I did not create all the art myself in addition to handling the programming.
+                        </p>
+                    </div>
+                    <div class="rightCol">
+                        <img src="mainCapsule1232x706.png">
+                    </div>
+                </div>
+
+                <div class="sideDiv">
+                    <div class="sideBlock">
+                        <img src="autofisher.png">
+                        <div>
+                            <h1>Why</h1>
+                            <p>When I started this project, I wanted to push myself beyond the boundaries of my previous work. I had made several smaller, unfinished games using traditional game engines, but this time I wanted to both challenge myself and finish a project. To do that, I decided to build the game without a game engine. I chose to write everything in C++ and use the SDL2 library.
+                                Over time, I've been transitioning the project to use GLFW, Glad, and GLM to support more advanced graphical features like lighting and shadows.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sideBlock">
+                        <img src="shadows.png">
+                        <div>
+                            <h1>Learned</h1>
+                            <p>Through this project, I've gained a much deeper understanding of programming, project organization, and even how computers work at a lower level. Since I'm not using a game engine, I've had to build many systems from scratch, systems that are usually handled for you in popular engines. This includes writing custom classes for animations, UI components like buttons and text, save/load systems, file parsers, and more.
+                                Rebuilding these core features has given me a strong appreciation for how game engines work under the hood and has significantly improved my coding skills, especially in areas like architecture, debugging, and managing complexity over time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="overlap">
+                        <div>
+                            <h1>Challenges</h1>
+                            <p>One of the biggest challenges has been the math. Features like collision detection, pathfinding, and dynamic shadows required deep dives into matrix math and other advanced concepts. Solving these problems has not only improved my skills but also reminded me how much I enjoy the problem-solving side of development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="demoDiv">
+                        <video controls autoplay>
+                            <source src="lilDemo.mov" type="video/mp4">
+                        </video>
+                        <div>
+                            <h1>Demo Video</h1>
+                            <p>A quick video to showcase some of the main features and gameplay of Idle Fisher. In this clip, I demonstrate fishing, interacting with NPC shops, using auto fishers, buying and selling fish, unlocking upgrades, and progressing through new worlds.
+                                This project has been a huge learning experience, and I'm excited to keep building and refining it.
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="projectDiv">
+                <h1>Big Projects</h1>
+                <div class="items">
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/idleFisher"'>
+                        <p>Idle Fisher</p>
+                        <img src="thumbnails/idleFisher.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/multiplayerENET"'>
+                        <p>Multiplayer ENET</p>
+                        <img src="thumbnails/multiplayerENET.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/CALCulator"'>
+                        <p>CALCulator</p>
+                        <img src="thumbnails/calculator.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/Food-Tracking-App"'>
+                        <p>Food App</p>
+                        <img src="thumbnails/foodApp.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/nfcCardGame"'>
+                        <p>Card Game</p>
+                        <img src="thumbnails/cardGame.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="projectDiv" style="padding-bottom: 100px;">
+                <h1>Small Projects</h1>
+                <div class="items">
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/Tetris"'>
+                        <p>Tetris</p>
+                        <img src="thumbnails/tetris.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="./pacman"'>
+                        <p>Pacman</p>
+                        <img src="thumbnails/pacman.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="./chessAI"'>
+                        <p>Chess AI</p>
+                        <img src="thumbnails/chessAI.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="./weightCalculator"'>
+                        <p>Weight Calculator</p>
+                        <img src="thumbnails/weightCalculator.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="./japaneseHelper"'>
+                        <p>Japanese Helper</p>
+                        <img src="thumbnails/japaneseHelper.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="./kanji"'>
+                        <p>Kanji</p>
+                        <img src="thumbnails/kanji.png">
+                    </div>
+                </div>
+            </div>
+            <div>
+            </div>
+            <div id="footer">
+                <p style="color: white">GitHub Links</p>
+                <lu id="links">
+                    <li><a href="https://github.com/bspafford/">GitHub Page<img src="githubIcon.svg" style="width: 30px"></a></li>
+                    <li><a href="https://github.com/bspafford/idleFisher">Idle Fisher</a></li>
+                    <li><a href="https://github.com/bspafford/multiplayerENET">Multipler ENET</a></li>
+                    <li><a href="https://github.com/bspafford/CALCulator">CALCulator</a></li>
+                    <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/pacman">Pacman</a></li>
+                    <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/ChessAI">ChessAI</a></li>
+                    <li><a href="https://github.com/bspafford/Tetris">Tetris</a></li>
+                    <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/weightCalculator">Weight Calculator</a></li>
+                    <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/japaneseHelper">Japanese Helper</a></li>
+                    <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/kanji">Kanji</a></li>
+                </lu>
+            </div>
+        </section>
+    </body>
+    <script src="index.js"></script>
+</html>
