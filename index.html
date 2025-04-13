@@ -21,10 +21,9 @@
                 <div class="horizontal" style="margin-top: 300px">
                     <div class="leftCol">
                         <h1>Idle Fisher</h1>
-                        <h2>This is my biggest project called, Idle fisher. This 
-                            has been a fun project I have been working on for a 
-                            few months now. It's an idle game where the premise 
-                            of the game is to fish, upgrade, and idle. </h2>
+                        <p>Idle Fisher is my biggest and most ambitious project to date. It's an idle game built around fishing, upgrading, and idling. It's a pretty simple concept but full of challenges.
+                            I'm a solo developer, responsible for all aspects of the game. While I initially had help with the artwork, I did not create all the art myself in addition to handling the programming.
+                        </p>
                     </div>
                     <div class="rightCol">
                         <img src="mainCapsule1232x706.png">
@@ -35,25 +34,19 @@
                     <div class="sideBlock">
                         <img src="autofisher.png">
                         <div>
-                            <h1>Solo</h1>
-                            <h2>I am a solo dev. I have done all of the programming.
-                                I used to have someone help me with the art, but now
-                                I am also making the art by myself too.</h2>
+                            <h1>Why</h1>
+                            <p>When I started this project, I wanted to push myself beyond the boundaries of my previous work. I had made several smaller, unfinished games using traditional game engines, but this time I wanted to both challenge myself and finish a project. To do that, I decided to build the game without a game engine. I chose to write everything in C++ and use the SDL2 library.
+                                Over time, I've been transitioning the project to use GLFW, Glad, and GLM to support more advanced graphical features like lighting and shadows.
+                            </p>
                         </div>
                     </div>
                     <div class="sideBlock">
-                        <img src="walking.png">
+                        <img src="shadows.png">
                         <div>
-                            <h1>Why</h1>
-                            <h2>When first beginning this project, I wanted a 
-                                challenge. I've made lots of other unfinished 
-                                projects previously using game engines, but this 
-                                time I wanted more of a challenge. I wanted not only
-                                to make a game without an engine, but also finish 
-                                it. So I chose to use a language I was used to, C++, 
-                                and a library for games like this, SDL2. Right now I 
-                                am slowly trying to transition my game to use Glad, 
-                                GLFW, and GLM, for more advanced features like shadows.</h2>
+                            <h1>Learned</h1>
+                            <p>Through this project, I've gained a much deeper understanding of programming, project organization, and even how computers work at a lower level. Since I'm not using a game engine, I've had to build many systems from scratch, systems that are usually handled for you in popular engines. This includes writing custom classes for animations, UI components like buttons and text, save/load systems, file parsers, and more.
+                                Rebuilding these core features has given me a strong appreciation for how game engines work under the hood and has significantly improved my coding skills, especially in areas like architecture, debugging, and managing complexity over time.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -61,12 +54,21 @@
                     <div class="overlap">
                         <div>
                             <h1>Challenges</h1>
-                            <h2>One of my biggest challenges that I had to overcome was learning
-                                all the complex math. Adding Features like collision detection, 
-                                path finding, shadow, etc. I love math, and 
-                                trying to find solutions and explanations to problems. It took 
-                                lots of time and research to get more comfortable with these 
-                                complex features.</h2>
+                            <p>One of the biggest challenges has been the math. Features like collision detection, pathfinding, and dynamic shadows required deep dives into matrix math and other advanced concepts. Solving these problems has not only improved my skills but also reminded me how much I enjoy the problem-solving side of development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="demoDiv">
+                        <video controls autoplay>
+                            <source src="lilDemo.mov" type="video/mp4">
+                        </video>
+                        <div>
+                            <h1>Demo Video</h1>
+                            <p>A quick video to showcase some of the main features and gameplay of Idle Fisher. In this clip, I demonstrate fishing, interacting with NPC shops, using auto fishers, buying and selling fish, unlocking upgrades, and progressing through new worlds.
+                                This project has been a huge learning experience, and I'm excited to keep building and refining it.
+                                </p>
                         </div>
                     </div>
                 </div>
@@ -76,17 +78,25 @@
             <div class="projectDiv">
                 <h1>Big Projects</h1>
                 <div class="items">
-                    <div class="projectItem" id="idleFisher" onclick="location.href='#idleFisher'">
-                        <h2>Idle Fisher</h2>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/idleFisher"'>
+                        <p>Idle Fisher</p>
                         <img src="thumbnails/idleFisher.png">
                     </div>
-                    <div class="projectItem" data-link="./multiplayerENET">
-                        <h2>Multiplayer ENET</h2>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/multiplayerENET"'>
+                        <p>Multiplayer ENET</p>
                         <img src="thumbnails/multiplayerENET.png">
                     </div>
-                    <div class="projectItem" data-link="./calculator">
-                        <h2>CALCulator</h2>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/CALCulator"'>
+                        <p>CALCulator</p>
                         <img src="thumbnails/calculator.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/Food-Tracking-App"'>
+                        <p>Food App</p>
+                        <img src="thumbnails/foodApp.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/nfcCardGame"'>
+                        <p>Card Game</p>
+                        <img src="thumbnails/cardGame.png">
                     </div>
                 </div>
             </div>
@@ -94,34 +104,36 @@
             <div class="projectDiv" style="padding-bottom: 100px;">
                 <h1>Small Projects</h1>
                 <div class="items">
-                    <div class="projectItem" data-link="./pacman">
-                        <h2>Pacman</h2>
-                        <img src="thumbnails/pacman.png">
-                    </div>
-                    <div class="projectItem" data-link="./chessAI">
-                        <h2>Chess AI</h2>
-                        <img src="thumbnails/chessAI.png">
-                    </div>
-                    <div class="projectItem" data-link="./tetris">
-                        <h2>Tetris</h2>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/Tetris"'>
+                        <p>Tetris</p>
                         <img src="thumbnails/tetris.png">
                     </div>
-                    <div class="projectItem" data-link="./weightCalculator">
-                        <h2>Weight Calculator</h2>
+                    <div class="projectItem" onclick='location.href="./pacman"'>
+                        <p>Pacman</p>
+                        <img src="thumbnails/pacman.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="./chessAI"'>
+                        <p>Chess AI</p>
+                        <img src="thumbnails/chessAI.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="./weightCalculator"'>
+                        <p>Weight Calculator</p>
                         <img src="thumbnails/weightCalculator.png">
                     </div>
-                    <div class="projectItem" data-link="./japaneseHelper">
-                        <h2>Japanese Helper</h2>
+                    <div class="projectItem" onclick='location.href="./japaneseHelper"'>
+                        <p>Japanese Helper</p>
                         <img src="thumbnails/japaneseHelper.png">
                     </div>
-                    <div class="projectItem" data-link="./kanji">
-                        <h2>Kanji</h2>
+                    <div class="projectItem" onclick='location.href="./kanji"'>
+                        <p>Kanji</p>
                         <img src="thumbnails/kanji.png">
                     </div>
                 </div>
             </div>
+            <div>
+            </div>
             <div id="footer">
-                <h2 style="color: white">GitHub Links</h2>
+                <p style="color: white">GitHub Links</p>
                 <lu id="links">
                     <li><a href="https://github.com/bspafford/">GitHub Page<img src="githubIcon.svg" style="width: 30px"></a></li>
                     <li><a href="https://github.com/bspafford/idleFisher">Idle Fisher</a></li>
