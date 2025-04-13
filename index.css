@@ -12,7 +12,12 @@ h1 {
     color: white;
 }
 
-h2 {
+p {
+    font-size: 15px;
+}
+
+p {
+    color: white;
     font-size: 15px;
 }
 
@@ -111,24 +116,24 @@ body {
 
 .items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, 47.5%);
+    gap: 5%;
     position: relative;
     z-index: 10;
     color: white;
+    width: 100%;
 }
 
 .projectItem {
     display: inline-block;
     position: relative;
-    width: 200px;
-    height: 300px;
+    height: fit-content;
     background: #000000;
     border-radius: 10px;
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s ease;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .projectItem.visible {
@@ -151,8 +156,8 @@ body {
 
 .projectItem img {
     display: block;
-    width: 200px;
-    height: auto;
+    width: 100%;
+    height: fit-content;
     border-radius: 10px;
     opacity: 1;
     transition: opacity 0.3s ease, scale 0.3s ease;
@@ -163,7 +168,7 @@ body {
     scale: 1.05;
 }
 
-.projectItem h2 {
+.projectItem p {
     font-size: 20px;
     z-index: 10;
     color: white;
@@ -176,7 +181,7 @@ body {
     transition: left 0.3s ease, opacity 0.3s ease;
 }
 
-.projectItem:hover h2 {
+.projectItem:hover p {
     opacity: 1;
     left: 6%;
 }
@@ -248,7 +253,7 @@ body {
 
 .leftCol {
     flex: 1 1 50%;
-    padding: 5% 10%;
+    padding: 3% 5%;
     align-self: center;
 }
 
@@ -270,7 +275,7 @@ body {
     padding: 0px;
 }
 
-.horizontal h2 {
+.horizontal p {
     color: white;
     padding: 0% 0% 0% 0%;
     text-align: justify;
@@ -285,7 +290,6 @@ body {
     gap: 25px;
     flex-direction: column;
     margin-bottom: 500px;
-
 }
 
 .sideBlock {
@@ -313,7 +317,7 @@ body {
     padding: 0px;
 }
 
-.sideBlock h2 {
+.sideBlock p {
     color: white;
     padding: 0% 0% 0% 0%;
     text-align: justify;
@@ -323,11 +327,11 @@ body {
     display: flex;
     justify-content: center;
     padding-bottom: 200px;
+    width: 100%;
 }
 
 .overlap {
     display: flex;
-    margin-bottom: 0px;
     border-radius: 10px;
     width: 97%;
     height: 100%;
@@ -339,6 +343,7 @@ body {
     background-size: cover;
     image-rendering: pixelated;
     background-position: 65% 50%;
+    margin-bottom: 500px;
 }
 
 .overlap div {
@@ -364,13 +369,32 @@ body {
     font-size: 50px;
     padding: 0px;
     text-shadow: 2px 2px 5px #000000aa;
-    
 }
 
-.overlap h2 {
+.overlap p {
     text-indent: 1em;
     color: white;
     text-shadow: 3px 3px 5px #00000088;
+}
+
+.demoDiv {
+    width: 90%;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.demoDiv div {
+    padding: 5%;
+}
+
+.demoDiv h1 {
+    font-size: 50px;
+    padding: 0px;
+}
+
+.demoDiv video {
+    width: 100%;
+    border-radius: 10px;
 }
 
 /* screen size is 601 or more */
@@ -388,7 +412,7 @@ body {
         font-size: 60px;
     }
 
-    h2 {
+    p {
         font-size: 24px;
         line-height: 2.25rem;
         font-weight: lighter;
@@ -397,6 +421,14 @@ body {
     .horizontal {
         flex-direction: row;
 
+    }
+
+    .demoDiv {
+        width: 50%;
+    }
+
+    .items {
+        grid-template-columns: repeat(auto-fit, 200px);
     }
 }
 
