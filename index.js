@@ -9,6 +9,7 @@ fadeText = document.getElementById("fadeText")
 
 let currentFrame = 0;
 
+/*
 const items = document.querySelectorAll('.projectItem');
 items.forEach(item => {
   item.addEventListener('click', () => {
@@ -18,6 +19,7 @@ items.forEach(item => {
     }
   });
 });
+*/
 
 // Preload images
 for (let i = 0; i < frameCount; i++) {
