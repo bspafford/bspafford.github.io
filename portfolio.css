@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    font-family: "Inter Tight";
+    font-weight: 600;
+}
+
+body {
+    background-color: #0b0c0c;
+}
+
+#introText {
+    padding-top: 75px;
+}
+
+#infoDiv {
+    height: fit-content;
+    background-color: #0b0c0c;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.infoBox {
+    display: flex;
+    width: 60%;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.textBox {
+    margin-top: 25px;
+    width: 50%;
+}
+
+.textBox h1 {
+    font-weight: 600;
+    font-size: 6vw;
+}
+
+.textBox p {
+    font-size: 4vw;
+    font-weight: 300;
+}
+
+.infoBox img {
+    width: 50%;
+    height: fit-content;
+    border-radius: 20px;
+}
+
+#frameDiv {
+    width: 40%;
+    height: auto;
+    aspect-ratio: 1.7;
+    margin: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+#frameDiv iframe {
+    border: none;
+}
+
+@media screen and (min-width: 601px) {
+    .infoBox {
+        flex-direction: row;
+        margin-top: 100px;
+    }
+
+    .infoBox img {
+        width: 40%;
+        height: fit-content;
+        object-fit: cover;
+        border-radius: 20px;
+        margin: 25px;
+    }
+
+    #flippedInfoBox {
+        flex-direction: row-reverse;
+    }
+
+    .textBox h1 {
+        font-size: 1.25vw;
+    }
+    
+    .textBox p {
+        font-size: .75vw;
+    }
+}

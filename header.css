@@ -1,0 +1,214 @@
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 0px; /* <- no rounding */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.navHeader {
+    position: sticky;
+    z-index: 1000;
+    background-color: #0b0c0c;
+    top: 0px;
+    width: 100%;
+    height: 100px;
+}
+
+nav ul, .content ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    background: none;
+    color: white;
+    font-size: 20px;
+    margin: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, a {
+    color: white;
+    text-decoration: none;
+}
+
+header img {
+    position: relative;
+    height: 60px;
+    top: 50%;
+    padding: 0 25px 0 100px;
+    transform: translate(0, -50%);
+}
+
+header a:hover {
+    transform: scale(1.1);
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* underline color */
+    transition: width 0.3s ease, font-size 0.3s ease;
+}
+
+header a:hover::after {
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.footer {
+    background-color: black;
+    height: fit-content;
+    padding: 20px 5% 50px 5%;
+}
+
+#mobileFooter {
+    display: block;
+}
+
+#desktopFooter {
+    display: none;
+}
+
+
+#links {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding-top: 10px;
+}
+
+#links li, .content li {
+    text-indent: -10px;
+    list-style-type: none;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+#links p {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+#links a, .content a {
+    text-decoration: none;
+    color: #bbb !important;
+    font-weight: 300;
+    transition: color .1s ease-out;
+}
+
+.content a {
+    padding-left: 20px;
+}
+
+#links a:hover {
+    color: white !important;
+}
+
+#links li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-wrap:nowrap;
+}
+
+#socialLinks {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#socialLinks img {
+    width: 40px;
+    margin: 0 5px;
+}
+
+.collapsible {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible p {
+    font-size: 4vw;
+    font-weight: 600;
+}
+
+.collapsible img {
+    width: 18px;
+    transition: rotate .3s ease;
+}
+
+.collapsible.active img {
+    rotate: 180deg;
+}
+
+.content {
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+}
+
+/* When open, allow enough space for content (adjust as needed) */
+.content.open {
+  max-height: 1000px; /* Adjust this based on expected content height */
+}
+
+.luPadding {
+    margin: 20px;
+}
+
+@media screen and (min-width: 601px) {
+    #mobileFooter {
+        display: none;
+    }
+
+    #desktopFooter {
+        display: block;
+    }
+}

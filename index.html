@@ -1,0 +1,292 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css"> 
+        <link rel="stylesheet" href="header.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="icon" type="image/x-icon" href="logo.png">    
+    </head>
+    <body>
+        <img id="heroImg" src="after.gif">
+
+        <div id="fadeLogo" class="fade-text"><img src="title.png"></div>
+
+        <section id="idleFisher">
+            <div class="fisherInfo" style="position: relative;">
+                <header class="navHeader">
+                    <nav class="nav-desktop">
+                        <ul class="desktopList">
+                            <li><img src="logo.png"></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <div id="goToProjects"><button onclick="location.href='#projects'">Go To Projects <img src="downArrow.png"></button></div>
+                <div class="horizontal">
+                    <div class="leftCol">
+                        <h1>Idle Fisher</h1>
+                        <p>Idle Fisher is my biggest and most ambitious project to date. It's an idle game built around fishing, upgrading, and idling. It's a pretty simple concept but full of challenges.
+                            I'm a solo developer, responsible for all aspects of the game. While I initially had help with the artwork, I did not create all the art myself in addition to handling the programming.
+                        </p>
+                    </div>
+                    <div class="rightCol">
+                        <img src="mainCapsule1232x706.png">
+                    </div>
+                </div>
+                <div class="center">
+                    <div id="youtubeDiv">
+                        <iframe src="https://www.youtube.com/embed/DkfKwfjaVx0?si=HszwyUAGY9t-7wMy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>This is one of my videos from my YouTube channel. The video above is where I go over all the different 
+                            ways on how I made my new and imporved water. I discuss all the different ways of how I went about 
+                            this, and all the challenges I faced along the way. There are many other videos like this on my channel.
+                            They all revolve around Idle Fisher, and me walking you through my through process and challenges of 
+                            what its like when adding features to a video game</p>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="sideDiv">
+                        <div class="sideBlock">
+                            <img id="imgLeft" src="autofisher.png">
+                            <div>
+                                <h1>Why</h1>
+                                <p>When I started this project, I wanted to push myself beyond the boundaries of my previous work. 
+                                    I had made several smaller, unfinished games using traditional game engines, but this time I 
+                                    wanted to both challenge myself and finish a project. To do that, I decided to build the game 
+                                    without a game engine. I chose to write everything in C++. I originally started with the SDL2 
+                                    library, but am now transitioning the project to use GLFW, Glad, and GLM to support more advanced 
+                                    graphical features like lighting, shadows, and more realistic water.</p>
+                            </div>
+                        </div>
+                        <div class="sideBlock">
+                            <img id="imgRight" src="shadows.png">
+                            <div>
+                                <h1>Learned</h1>
+                                <p>Through this project, I've gained a much deeper understanding of programming, project organization, 
+                                    and even how computers work at a lower level. Since I'm not using a game engine, I've had to build 
+                                    many systems from scratch, systems that are usually handled for you in popular engines. This 
+                                    includes writing custom classes for animations, UI components like buttons and text, I/O like 
+                                    save/load features, file parsers, and more. Rebuilding these core features has given me a strong 
+                                    appreciation for how game engines work under the hood and has significantly improved my coding 
+                                    skills, especially in areas like orginization, debugging, and optimization strategies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div id="beforeAfter">
+                        <div id="after">
+                            <img src="after.gif">
+                            <h1>After</h1>
+                        </div>
+                        <div id="before">
+                            <img src="before.gif">
+                            <h1>Before</h1>
+                        </div>
+                        <div id="line">
+                            <div id="vertLineTop"></div>
+                            <button id="dragButton"><img src="arrows.png"></button>
+                            <div id="vertLineBottom"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="overlap">
+                        <div>
+                            <h1>Challenges</h1>
+                            <p>One of the biggest challenges in developing Idle Fisher has been balancing depth with simplicity. I've 
+                                worked to create gameplay that feels rewarding and engaging over time without overwhelming the player 
+                                or breaking the "idle" experience. This has required many revisions—tweaking systems, reworking 
+                                features, and sometimes scrapping ideas entirely when they didn't play out as intended. Through this 
+                                process, I've learned the importance of iterative design, player-focused decision making, and being 
+                                willing to let go of ideas that don't serve the overall experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="demoDiv">
+                        <h1>Demo Video</h1>
+                        <video controls autoplay>
+                            <source src="lilDemo.mov" type="video/mp4">
+                        </video>
+                        <div>
+                            <p>A quick video to showcase some of the main features and gameplay of Idle Fisher. In this clip, I demonstrate fishing, interacting with NPC shops, using auto fishers, buying and selling fish, unlocking upgrades, and progressing through new worlds.
+                                This project has been a huge learning experience, and I'm excited to keep building and refining it.
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="projectDiv">
+                <div class="center" style="padding-bottom: 50px">
+                    <hr style="width: 80%;">
+                </div>
+                <h1 id="bigProjects">Big Projects</h1>
+                <div class="items">
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/idleFisher"'>
+                        <p>Idle Fisher</p>
+                        <img src="thumbnails/idleFisher.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/multiplayerENET"'>
+                        <p>Multiplayer ENET</p>
+                        <img src="thumbnails/multiplayerENET.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/CALCulator"'>
+                        <p>CALCulator</p>
+                        <img src="thumbnails/calculator.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/Food-Tracking-App"'>
+                        <p>Food App</p>
+                        <img src="thumbnails/foodApp.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/nfcCardGame"'>
+                        <p>Card Game</p>
+                        <img src="thumbnails/cardGame.png">
+                    </div>
+                </div>
+            </div>
+            <div class="projectDiv">
+                <h1 id="smallProjects">Small Projects</h1>
+                <div class="items">
+                    <div class="projectItem" onclick='location.href="https://github.com/bspafford/Tetris"'>
+                        <p>Tetris</p>
+                        <img src="thumbnails/tetris.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="./pacman"'>
+                        <p>Pacman</p>
+                        <img src="thumbnails/pacman.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="./ChessAI"'>
+                        <p>Chess AI</p>
+                        <img src="thumbnails/chessAI.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="./weightCalculator"'>
+                        <p>Weight Calculator</p>
+                        <img src="thumbnails/weightCalculator.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="./japaneseHelper"'>
+                        <p>Japanese Helper</p>
+                        <img src="thumbnails/japaneseHelper.png">
+                    </div>
+                    <div class="projectItem" onclick='location.href="./kanji"'>
+                        <p>Kanji</p>
+                        <img src="thumbnails/kanji.png">
+                    </div>
+                </div>
+            </div>
+            <div class="projectDiv" style="padding-bottom: 100px;">
+                <h1 id="smallProjects">Other</h1>
+                <div class="items">
+                    <div class="projectItem" onclick='location.href="https://sunsetmapledrafts.com"'>
+                        <p>Sunset Maple Drafts</p>
+                        <img src="thumbnails/sunsetMapleDrafts.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer" id="desktopFooter">
+            <div id="socialLinks">
+                <li>
+                    <a href="https://www.youtube.com/@FishyGamesDev"><img src="youtube.svg"></a>
+                    <a href="https://github.com/bspafford/"><img src="githubIcon.svg"></a>
+                </li>
+            </div>
+            <hr />
+            <div id="links">
+                <div>
+                    <p>Big Projects</p>
+                    <lu id="bigProjectLinks">
+                        <li><a href="https://github.com/bspafford/idleFisher">Idle Fisher</a></li>
+                        <li><a href="https://github.com/bspafford/multiplayerENET">Multipler ENET</a></li>
+                        <li><a href="https://github.com/bspafford/CALCulator">CALCulator</a></li>
+                    </lu>
+                </div>
+                <div>
+                    <p>Small Projects</p>
+                    <lu>
+                        <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/pacman">Pacman</a></li>
+                        <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/ChessAI">ChessAI</a></li>
+                        <li><a href="https://github.com/bspafford/Tetris">Tetris</a></li>
+                        <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/weightCalculator">Weight Calculator</a></li>
+                        <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/japaneseHelper">Japanese Helper</a></li>
+                        <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/kanji">Kanji</a></li>
+                    </lu>
+                </div>
+                <div>
+                    <p>Other</p>
+                    <lu>
+                        <li><a href="https://sunsetmapledrafts.com">Sunset Maple Drafts</a></li>
+                    </lu>
+                </div>
+                <div>
+                    <p>Pages</p>
+                    <lu>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </lu>
+                </div>
+            </div>
+        </div>
+        <div class="footer" id="mobileFooter">
+            <div class="center" style="padding-bottom: 25px">
+                <div id="socialLinks">
+                    <li>
+                        <a href="https://www.youtube.com/@FishyGamesDev"><img src="youtube.svg"></a>
+                        <a href="https://github.com/bspafford/"><img src="githubIcon.svg"></a>
+                    </li>
+                </div>
+            </div>
+            <hr>
+            <button type="button" class="collapsible"><p>Big Projects</p><img src="chevron-down.svg"></button>
+            <div class="content">
+                <lu id="bigProjectLinks">
+                    <li><a href="https://github.com/bspafford/idleFisher">Idle Fisher</a></li>
+                    <li><a href="https://github.com/bspafford/multiplayerENET">Multipler ENET</a></li>
+                    <li><a href="https://github.com/bspafford/CALCulator">CALCulator</a></li>
+                </lu>
+                <div class="luPadding"></div>
+            </div>
+            <hr>
+            <button type="button" class="collapsible"><p>Small Projects</p><img src="chevron-down.svg"></button>
+            <div class="content">
+                <lu>
+                    <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/pacman">Pacman</a></li>
+                    <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/ChessAI">ChessAI</a></li>
+                    <li><a href="https://github.com/bspafford/Tetris">Tetris</a></li>
+                    <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/weightCalculator">Weight Calculator</a></li>
+                    <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/japaneseHelper">Japanese Helper</a></li>
+                    <li><a href="https://github.com/bspafford/bspafford.github.io/tree/main/kanji">Kanji</a></li>
+                </lu>
+                <div class="luPadding"></div>
+            </div>
+            <hr>
+            <button type="button" class="collapsible"><p>Other</p><img src="chevron-down.svg"></button>
+            <div class="content">
+                <lu>
+                    <li><a href="https://sunsetmapledrafts.com">Sunset Maple Drafts</a></li>
+                </lu>
+                <div class="luPadding"></div>
+            </div>
+            <hr>
+            <button type="button" class="collapsible"><p>Pages</p><img src="chevron-down.svg"></button>
+            <div class="content">
+                <lu>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </lu>
+                <div class="luPadding"></div>
+            </div>
+            <hr>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
