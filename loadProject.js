@@ -2,7 +2,7 @@ class ProjectLayout extends HTMLElement {
     async connectedCallback() {
         const title = this.getAttribute('title') || 'Title';
         const description = this.getAttribute('description') || 'Description';
-        const video = this.getAttribute('video');
+        const videoSrc = this.getAttribute('video');
         const badges = JSON.parse(this.getAttribute('badges'));
         const links = JSON.parse(this.getAttribute('links'));
         
@@ -13,7 +13,24 @@ class ProjectLayout extends HTMLElement {
 
         this.querySelector(".title").innerHTML = title;
         this.querySelector(".description").innerHTML = description;
-        this.querySelector(".video").src = video;
+
+        const videoDiv = this.querySelector(".video");   
+        if (videoSrc.includes("https://www.youtube.com")) { /// then embed
+            const iframe = document.createElement("iframe");
+            iframe.src = videoSrc;
+            iframe.width = 800;
+            iframe.style.aspectRatio = 16/9;
+            iframe.allowFullscreen = true;
+            iframe.frameBorder = false;
+            videoDiv.appendChild(iframe);
+        } else {
+            const video = document.createElement("video");
+            video.src = videoSrc;
+            video.width = 800;
+            video.style.aspectRatio = 16/9;
+            video.controls = true;
+            videoDiv.appendChild(video);
+        }
 
         for (let badge in badges) {
             let projectInfo = this.querySelector(".projectInfo");
