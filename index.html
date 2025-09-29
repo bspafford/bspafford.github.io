@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="header.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="default.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="images/favIcon.png" type="image/png">
+    </head>
+
+    <body>
+        <div class="center">
+            <div class="container">
+                <h1 id="nameText">Ben Spafford</h1>
+                <img id="pfp" src="images/pfp.png">
+                <div class="links">
+                    <a href="https://youtube.com/@fishygamesdev"><img src="images/youtubeIcon.svg"></a>
+                    <a href="https://github.com/bspafford/"><img src="images/githubIcon.svg"></a>
+                    <a href="https://store.steampowered.com/app/3613500/Idle_Fisher/"><img src="images/steamIcon.svg"></a>
+                    <a href="mailto:bspafford05@gmail.com"><img src="images/mailIcon.svg"></a>
+                </div>
+                <hr>
+                <div id="aboutMe">
+                    <p>Hi! I'm a self-taught programmer who's been passionate about coding since I was 12. I love building games, systems, and tools that challenge me to learn something new. Below are some of my favorite projects, each one marks a step forward in my growth as a developer.</p>
+                </div>
+                <hr>
+                <div class="sections">
+                    <button onclick="showSection('projects')">Projects</button>
+                    <button onclick="showSection('skills')">Skills</button>
+                </div>
+                <div class="projectDiv">
+                    <div class="items">
+                        <div class="projectItem" onclick='location.href="idleFisher"'>
+                            <p>Idle Fisher</p>
+                            <img src="images/thumbnails/idleFisher.png">
+                        </div>
+                        <div class="projectItem" onclick='location.href="portal"'>
+                            <p>Portal Game</p>
+                            <img src="images/thumbnails/portalGame.png">
+                        </div>
+                        <div class="projectItem" onclick='location.href="foodApp"'>
+                            <p>Food App</p>
+                            <img src="images/thumbnails/foodApp.png">
+                        </div>
+                        <div class="projectItem" onclick='location.href="sunsetmapledrafts"'>
+                            <p>Sunset Maple Drafts</p>
+                            <img src="images/thumbnails/sunsetMapleDrafts.png">
+                        </div>
+                        <div class="projectItem" onclick='location.href="multiplayerENET"'>
+                            <p>Multiplayer ENET</p>
+                            <img src="images/thumbnails/multiplayerENET.png">
+                        </div>
+                        <div class="projectItem" onclick='location.href="calculator"'>
+                            <p>CALCulator</p>
+                            <img src="images/thumbnails/calculator.png">
+                        </div>
+                        <div class="projectItem" onclick='location.href="tetris"'>
+                            <p>Tetris</p>
+                            <img src="images/thumbnails/tetris.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="skillDiv">
+                    <h2>Languages</h2>
+                    <div class="skillSection" id="languageDiv"></div>
+                    <hr>
+                    <h2>Frameworks / Libraries</h2>
+                    <div class="skillSection" id="frameworkDiv"></div>
+                    <hr>
+                    <h2>Tools</h2>
+                    <div class="skillSection" id="toolDiv"></div>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
