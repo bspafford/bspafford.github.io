@@ -1,0 +1,159 @@
+#nameText {
+    padding-top: 20px;
+    font-size: 75px;
+    text-shadow: 7px 7px #111111;
+}
+
+
+#pfp {
+    width: 200px;
+    margin: 20px;
+    margin-bottom: 10px;
+    filter: drop-shadow(8px 8px #111111);
+}
+
+#aboutMe {
+    padding: 30px;
+}
+
+#aboutMe p {
+    text-align: center;
+}
+
+.sections {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.sections button {
+    background: none;
+    border: 1px solid white;
+    width: 175px;
+    height: 45px;
+    box-shadow: 8px 8px #111111;
+    transition: all 0.3s ease;
+}
+
+.sections button:hover {
+    cursor: pointer;
+    scale: 1.1;
+    box-shadow: 4px 4px #000000;
+}
+
+.projectDiv {
+    display: inline-block;
+    padding-bottom: 30px;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectDiv h1 {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 30px;
+    position: relative;
+    z-index: 10;
+    color: white;
+    justify-content: center;
+}
+
+.projectItem {
+    display: inline-block;
+    position: relative;
+    height: fit-content;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 8px 8px #181a1f;
+    transition: all 0.3s ease;
+}
+
+.projectItem:hover {
+    box-shadow: 5px 5px #0f1013;
+
+}
+
+.projectItem::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.projectItem:hover::after {
+    box-shadow: inset 0px 0px 100px #000000;
+}
+
+.projectItem img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity 0.3s ease, scale 0.3s ease;
+}
+
+.projectItem img:hover {
+    opacity: 0.75;
+    scale: 1.05;
+}
+
+.projectItem p {
+    font-size: 20px;
+    z-index: 10;
+    color: white;
+    position: absolute;
+    top: 98%;
+    left: 4%;
+    transform: translate( 0%, -100%);
+    opacity: 0;
+    transition: left 0.3s ease, opacity 0.3s ease;
+}
+
+.projectItem:hover p {
+    opacity: 1;
+    left: 6%;
+}
+
+.skillDiv {
+    display: none;
+    width: 90%;
+}
+
+.skillDiv h2 {
+    padding-top: 15px;
+    font-size: 35px;
+    text-shadow: 6px 6px #111111;
+}
+
+.skillBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid white;
+    box-shadow: 8px 8px #111111;
+    transition: all 0.3s ease;
+}
+
+.skillBar:hover {
+    cursor: pointer;
+    width: 110%;
+    transform: scale(1.01, 1.1);
+    box-shadow: 4px 4px #000000;
+}
+
+.skillSection {
+    padding: 10px;
+}
