@@ -1,30 +1,30 @@
 const languages = {
     "C++": 90,
-    "C#": 85,
-    "HTML": 80,
-    "CSS": 75,
-    "JavaScript": 70,
-    "Python": 60,
-    "SQL": 50,
-    "GLSL": 40,
-    "JSX": 30,
-    "Swift": 20,
-    "PHP": 10
+    "C#": 80,
+    "Python": 75,
+    "HTML": 75,
+    "CSS": 70,
+    "JavaScript": 65,
+    "JSX": 60,
+    "GLSL": 50,
+    "PHP": 35,
+    "SQL": 30,
+    "Swift": 25,
 };
 
 const frameworks = { // / libraries / APIs
-    "OpenGL": 50,
-    "WinAPI": 40,
-    "React Native": 30,
+    "OpenGL": 70,
+    "React Native": 40,
+    "WinAPI": 20,
 }
 
 const tools = {
-    "Visual Studio": 60,
-    "Visual Studio Code": 50,
-    "Photoshop": 40,
-    "Premier Pro": 30,
-    "Unreal Engine": 20,
-    "Unity": 10,   
+    "Unreal Engine": 90,
+    "Unity": 80,   
+    "Premiere Pro": 75,
+    "Photoshop": 65,
+    "Visual Studio": 40,
+    "Visual Studio Code": 35,
 }
 
 // languages
