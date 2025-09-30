@@ -18,7 +18,7 @@ class ProjectLayout extends HTMLElement {
             titleImg.src = title;
 
             if (title.includes("sunsetMapleDrafts")) {
-                titleImg.style.width = "60%";
+                titleImg.style.width = "100%";
             } else if (title.includes("idleFisher")) {
                 titleImg.style.imageRendering = "pixelated";
             }
