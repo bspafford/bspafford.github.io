@@ -12,7 +12,6 @@ class ProjectLayout extends HTMLElement {
         this.classList.add('loaded');
 
         const titleDiv = this.querySelector(".titleDiv");
-        console.log(title);
         if (this.isPath(title)) { // image
             const titleImg = document.createElement("img");
             titleImg.className = "titleImg";
@@ -52,7 +51,7 @@ class ProjectLayout extends HTMLElement {
             source.src = videoSrc;
             video.height = 450;
             video.controls = true;
-            source.type = "video/mp4; codecs=hevc";
+            source.type = "video/mp4;";
             videoDiv.appendChild(video);
         }
 
@@ -79,7 +78,6 @@ class ProjectLayout extends HTMLElement {
     }
 
     getLinkIcon(link) {
-        console.log("link: ",link);
         link = link.toLowerCase();
         if (link == "youtube")
             return "../images/youtubeIcon.svg";
