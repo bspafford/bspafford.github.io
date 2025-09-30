@@ -43,6 +43,7 @@ p {
 .titleImg {
     padding: 20px;
     width: 65%;
+    min-width: 350px;
 }
 
 .projectInfo {
@@ -54,7 +55,7 @@ p {
 .description {
     padding-bottom: 30px;
     width: 100%;
-
+    min-width: 350px;
 }
 
 .demoVideo {
