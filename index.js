@@ -93,7 +93,11 @@ for (tool in tools) {
 
 const projectDiv = document.getElementsByClassName("projectDiv")[0];
 const skillDiv = document.getElementsByClassName("skillDiv")[0];
+const projectDetail = document.getElementById("projectDetail");
 function showSection(sectionName) {
+    activeProject = "";
+    projectDetail.style.display = "none";
+
     switch (sectionName) {
         case 'projects':
             projectDiv.style.display = "block";
