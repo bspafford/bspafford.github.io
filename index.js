@@ -27,6 +27,19 @@ const tools = {
     "Visual Studio Code": 35,
 }
 
+var activeProject = "";
+
+window.addEventListener('scroll', () => {
+    const button = document.getElementById('toTop');
+    if (window.scrollY > 1000) {
+        button.style.opacity = '100%';
+        button.style.pointerEvents = "auto";
+    } else {
+        button.style.opacity = '0%';
+        button.style.pointerEvents = "none";
+    }
+})
+
 // languages
 let languageDiv = document.getElementById("languageDiv");
 for (lang in languages) {
@@ -91,4 +104,31 @@ function showSection(sectionName) {
             skillDiv.style.display = "block";
             break;
     }
+}
+
+async function toggleProject(projectName) {
+    const projectDetail = document.getElementById("projectDetail");
+    
+    if (activeProject == projectName) {
+        // remove project
+        activeProject = "";
+        projectDetail.style.display = "none";
+        return;
+    }
+    
+    activeProject = projectName;
+    const response = await fetch(`${projectName}/index.html`);
+    const html = await response.text();
+    projectDetail.innerHTML = "<hr>" + html;
+    projectDetail.style.display = "block";
+
+    requestAnimationFrame(() => {
+        const projectSection = document.getElementById("projectDetail");
+        projectSection.scrollIntoView({ behavior: 'smooth'});
+    });
+}
+
+function goToTop() {
+    const projectSection = document.getElementById("top");
+    projectSection.scrollIntoView({ behavior: 'smooth'});
 }
