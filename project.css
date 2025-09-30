@@ -28,9 +28,21 @@ p {
     cursor: pointer;
 }
 
+.titleDiv {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
 .title {
     font-size: 50px;
     padding: 20px;
+}
+
+.titleImg {
+    padding: 20px;
+    width: 35%;
 }
 
 .projectInfo {
@@ -41,6 +53,8 @@ p {
 
 .description {
     padding-bottom: 30px;
+    width: 70%;
+
 }
 
 .demoVideo {

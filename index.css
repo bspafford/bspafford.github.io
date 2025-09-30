@@ -137,6 +137,10 @@
     text-shadow: 6px 6px #111111;
 }
 
+.skillDiv hr {
+    margin: 40px 0px 20px 0px;
+}
+
 .skillBar {
     display: flex;
     justify-content: space-between;
@@ -148,7 +152,6 @@
 }
 
 .skillBar:hover {
-    cursor: pointer;
     width: 110%;
     transform: scale(1.01, 1.1);
     box-shadow: 4px 4px #000000;

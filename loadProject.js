@@ -11,7 +11,28 @@ class ProjectLayout extends HTMLElement {
         this.innerHTML = html;
         this.classList.add('loaded');
 
-        this.querySelector(".title").innerHTML = title;
+        const titleDiv = this.querySelector(".titleDiv");
+        console.log(title);
+        if (this.isPath(title)) { // image
+            const titleImg = document.createElement("img");
+            titleImg.className = "titleImg";
+            titleImg.src = title;
+
+            if (title.includes("sunsetMapleDrafts")) {
+                titleImg.style.width = "60%";
+            } else if (title.includes("idleFisher")) {
+                titleImg.style.imageRendering = "pixelated";
+            }
+
+
+            titleDiv.appendChild(titleImg);
+        } else { // normal title
+            const titleText = document.createElement("h1");
+            titleText.className = "title";
+            titleText.innerHTML = title;
+            titleDiv.appendChild(titleText);
+        }
+
         this.querySelector(".description").innerHTML = description;
 
         const videoDiv = this.querySelector(".video");   
@@ -25,9 +46,13 @@ class ProjectLayout extends HTMLElement {
             videoDiv.appendChild(iframe);
         } else {
             const video = document.createElement("video");
-            video.src = videoSrc;
+            const source = document.createElement("source");
+            video.appendChild(source);
+
+            source.src = videoSrc;
             video.height = 450;
             video.controls = true;
+            source.type = "video/mp4; codecs=hevc";
             videoDiv.appendChild(video);
         }
 
@@ -83,6 +108,12 @@ class ProjectLayout extends HTMLElement {
             case "Language":
                 return "brightgreen";
         }
+    }
+
+    isPath(str) {
+        const pathPattern = /[\\\/]/;
+        const extensionPattern = /\.\w+$/;
+        return pathPattern.test(str) && extensionPattern.test(str);
     }
 }
 customElements.define('project-layout', ProjectLayout);

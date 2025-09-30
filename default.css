@@ -11,6 +11,10 @@ html {
     font-weight: 600;
 }
 
+p {
+    line-height: 1.5em;
+}
+
 body {
     background-color: #1D1F25;
 }
@@ -35,14 +39,14 @@ hr {
 
 .links {
     display: flex;
-    padding-bottom: 10px;
+    padding: 10px 0px 15px 0px;
     justify-content: center;
     align-items: center;
 }
 
 .links img {
     margin: 0px 5px;
-    width: 25px;
+    width: 35px;
     filter: drop-shadow(5px 5px #111111);
     transition: all 0.3s ease;
 }
