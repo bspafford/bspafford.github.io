@@ -58,7 +58,7 @@
     padding-bottom: 15px;
 }
 
-.items {
+#items {
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
     gap: 30px;
@@ -159,4 +159,34 @@
 
 .skillSection {
     padding: 10px;
+}
+
+#projectDetail {
+    width: 100%;
+    display: none;
+}
+
+#projectDetail hr {
+    margin: 30px;
+}
+
+#toTop {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border: 1px solid white;
+    background-color: #14161a;
+    box-shadow: 8px 8px #111111;
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+    border-radius: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+#toTop:hover {
+    cursor: pointer;
+    scale: 1.1;
+    box-shadow: 4px 4px #000000;
 }
