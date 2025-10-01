@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../default.css">
+        <link rel="stylesheet" href="../project.css">
+        <script src="../loadProject.js"></script>
+    </head>
+    <body>
+        <project-layout
+            title="NeuroRace"
+            description="This project is a neural network-based AI racing simulation built in Unreal Engine using both C++ and blueprints. It uses a genetic algorithm to evolve driving behavior over time. Each generation spawns 25 AI-controlled cars, and only the top performers (based on distance traveled and speed) are selected to pass their neural network parameters to the next generation. The rest are discarded, and the process repeats, gradually refining performance with no hardcoded pathfinding or driving logic.
+                        <br><br>
+                        Each car is controlled by a simple neural network with three input types: current speed, the angle difference from the car to the track’s direction, and five distance sensors measuring how close the car is to the track edges. The network outputs two continuous values: one for turn direction and one for acceleration. The fitness score is based on how far and how fast the car travels without crashing. Over time, cars learn to take turns more smoothly, avoid walls, and maintain higher speeds for longer durations.
+                        <br><br>
+                        Training began on a single test track, and once the AI showed consistent success, I tested the trained networks on completely new track layouts to see how well their behavior generalized. This project taught me a lot about evolutionary algorithms, neural network integration, and performance optimization within a game engine. Watching raw, untrained AI crash repeatedly, then evolve into competent drivers purely through simulated learning, was an incredibly rewarding experience.
+                        "
+            video="media/AIRacing.mp4"
+            badges='{
+                "Build Date": "May 27, 2025",
+                "Category": "Game",
+                "Engine": "UE5",
+                "Language": "C++, Blueprints"
+            }'
+            links='{
+                "youtube": "https://www.youtube.com/watch?v=Yq4we1JEVXc",
+                "github": "https://github.com/bspafford/AIRacing"
+            }'>
+        </project-layout>
+    </body>
+</html>
