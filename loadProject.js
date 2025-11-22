@@ -17,12 +17,11 @@ class ProjectLayout extends HTMLElement {
             titleImg.className = "titleImg";
             titleImg.src = title;
 
-            if (title.includes("sunsetMapleDrafts")) {
+            if (title.includes("sunsetMapleDrafts") || title.includes("rayTracing")) {
                 titleImg.style.width = "100%";
             } else if (title.includes("idleFisher")) {
                 titleImg.style.imageRendering = "pixelated";
             }
-
 
             titleDiv.appendChild(titleImg);
         } else { // normal title
@@ -50,7 +49,14 @@ class ProjectLayout extends HTMLElement {
 
             source.src = videoSrc;
             video.height = 450;
+
             video.controls = true;
+            if (videoSrc.includes("rayTracing")) {
+                video.controls = false;
+                video.loop = true;
+                video.autoplay = true;
+            }
+
             source.type = "video/mp4;";
             videoDiv.appendChild(video);
         }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../default.css">
+        <link rel="stylesheet" href="../project.css">
+        <script src="../loadProject.js"></script>
+    </head>
+    <body>
+        <project-layout
+            title="../images/rayTracingTitle.png"
+            description="This project is a fully custom GPU accelerated path tracer built from scratch, designed to render physically accurate lighting and complex material interactions. It supports a full PBR workflow: normal maps, metallic/roughness, index of refraction, and transmission, allowing scenes to display realistic specular reflections, refractions, and total internal reflection. Lighting is driven by both point lights and direct lighting contributions traced through the scene, producing crisp shadows and natural global illumination.
+                        <br><br>
+                        To keep performance high, the renderer uses a Bounding Volume Hierarchy (BVH) constructed with Surface Area Heuristics (SAH), drastically accelerating ray-scene intersections. Scenes are loaded from external files making the system flexible for testing different environments and materials. The core of the rendering pipeline is a multi-bounce path tracing loop, accumulating samples over time to converge toward a noise free image or animation.
+                        <br><br>
+                        To push final quality further, results are processed with Intel's Open Image Denoise, cleaning up low-sample renders while preserving material detail. The tool can also generate smooth animations, exporting entire sequences directly to .mp4 using FFmpeg. Overall this project demonstrates a physically based renderer, from material system to acceleration structures to final video output, implemented and optimized completely by hand.
+                        "
+            video="media/rayTracing.mp4"
+            badges='{
+                "Build Date": "November 22, 2025",
+                "Category": "Rendering",
+                "Library": "OpenGL, OIDN",
+                "Language": "C++, GLSL"
+            }'
+            links='{
+                "github": "https://github.com/bspafford/Raytracing"
+            }'>
+        </project-layout>
+    </body>
+</html>
