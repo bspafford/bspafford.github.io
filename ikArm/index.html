@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../default.css">
+        <link rel="stylesheet" href="../project.css">
+        <script src="../loadProject.js"></script>
+    </head>
+    <body>
+        <project-layout
+            title="Inverse Kinematics"
+            description="This is a project I created to explore the intersection of robotics, mathematics, and computer vision. I wanted to build a robotic arm capable of tracking and mimicking human hand movements, which required diving into the fundamentals of forward and inverse kinematics. I began by researching forward kinematics and building a basic 2D arm system, then transitioned into inverse kinematics to solve the problem of determining joint rotations from target positions. After experimenting with simpler two-joint solutions, I encountered the limitations of fixed approaches when expanding to more complex three-joint systems, leading me to explore Jacobian-based inverse kinematics.
+            <br><br>
+            A major challenge was developing a scalable IK solution that could support different arm configurations. I implemented a Jacobian inverse kinematics solver using concepts from linear algebra, calculus, and numerical optimization to dynamically calculate joint adjustments based on the target position. This allowed the arm to move beyond hardcoded joint counts and adapt to more complex multi-joint structures. After extending the system from 2D into 3D space, I integrated computer vision-based hand tracking using Python, OpenCV, and MediaPipe to capture real-time hand and finger positions.
+            <br><br>
+            The final system combined real-time tracking, inverse kinematics, and physics interactions to create a functional robotic arm simulation. Using multiple camera inputs, including a vertically oriented camera to capture depth and height information, the system could estimate hand movement and translate it into coordinated arm motion. The tracked finger positions controlled the opening and closing of the claw, allowing the arm to grasp and manipulate objects. This project strengthened my understanding of robotics algorithms, mathematical modeling, and the challenges of building responsive real-time systems.
+            "
+
+            video="media/ikArmDemo.mp4"
+            badges='{
+                "Build Date": "June 18, 2026",
+                "Category": "Game",
+                "Engine": "Unity",
+                "Language": "C%23"
+            }'
+            links='{
+                "github": "https://github.com/bspafford/Inverse-Kinematics",
+                "youtube": "https://www.youtube.com/watch?v=bP9-eKMtI1A"
+            }'>
+        </project-layout>
+    </body>
+</html>
